@@ -2,35 +2,53 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DetailKota;
 use App\Models\Kota;
 use App\Models\Kuliner;
 use App\Models\ProdukLokal;
 use App\Models\Provinsi;
+use App\Models\Volunter;
 use App\Models\Wisata;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $provinsis = Provinsi::all();
         $kotas = Kota::with('provinsi')->get();
-        $wisatas = Wisata::with('kota.provinsi')->get();
-        $kuliners = Kuliner::with('kota.provinsi')->get();
+        $wisatas = Wisata::with('kota.provinsi')->where('rating', '>=', 4.5)->get();
+        $kuliners = Kuliner::with('kota.provinsi')->take(4)->get();
         $kategoris = ProdukLokal::select('kategori')->distinct()->pluck('kategori');
         $produks = ProdukLokal::with('wisata.kota.provinsi')->get();
         $jenis_masakan = Kuliner::select('jenis_masakan')->distinct()->pluck('jenis_masakan');
-        return view('front.components.index', compact('wisatas', 'kuliners', 'provinsis', 'kotas', 'kategoris', 'produks', 'jenis_masakan'));
+        $komunitas = Volunter::where('nama_acara', 'like', '%komunitas%')->get();
+        $relawan = Volunter::where('nama_acara', 'not like', '%komunitas%')->get();
+        return view('front.components.index', compact('wisatas', 'kuliners', 'provinsis', 'kotas', 'kategoris', 'produks', 'jenis_masakan', 'komunitas', 'relawan'));
     }
-    public function wisata() {
+    public function wisata()
+    {
         return view('front.components.wisata');
     }
-    public function umkm() {
+    public function umkm()
+    {
         return view('front.components.umkm');
     }
-    public function kuliner() {
+    public function kuliner()
+    {
         return view('front.components.kuliner');
     }
-    public function komunitas() {
+    public function komunitas()
+    {
         return view('front.components.komunitas');
+    }
+
+    public function filter(Request $request)
+    {
+        $data = DetailKota::where('kota_id', $request->city)
+            ->with('kota.provinsi')
+            ->get();
+
+        return response()->json($data);
     }
 }
