@@ -10,6 +10,7 @@ use App\Models\Provinsi;
 use App\Models\Volunter;
 use App\Models\Wisata;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class FrontController extends Controller
 {
@@ -27,15 +28,18 @@ class FrontController extends Controller
         return view('front.components.index', compact('wisatas', 'kuliners', 'provinsis', 'kotas', 'kategoris', 'produks', 'jenis_masakan', 'komunitas', 'relawan'));
     }
 
-    public function wisata() {
+    public function wisata()
+    {
         $wisatas = Wisata::with('kota.provinsi')->get();
         return view('front.components.wisata', compact('wisatas'));
     }
-    public function umkm() {
+    public function umkm()
+    {
         $produks = ProdukLokal::with('wisata.kota.provinsi')->get();
         return view('front.components.umkm', compact('produks'));
     }
-    public function kuliner() {
+    public function kuliner()
+    {
         $kuliners = Kuliner::with('kota.provinsi')->get();
         return view('front.components.kuliner', compact('kuliners'));
     }
@@ -51,5 +55,27 @@ class FrontController extends Controller
             ->get();
 
         return response()->json($data);
+    }
+
+    public function cariMap(Request $request)
+    {
+        $location = $request->input('location');
+        $response = Http::post('http://localhost:5000/', [
+            'location' => $location,
+        ]);
+
+        $filteredData = $response->json();
+        $filteredData = $filteredData['locations'];
+        $locations = [];
+        foreach ($filteredData as $name => $coordinates) {
+            $locations[] = [
+                'name' => $name,
+                'latitude' => $coordinates[0],
+                'longitude' => $coordinates[1]
+            ];
+        }
+        $wisatas = Wisata::with('kota.provinsi')->get();
+
+        return view('front.components.wisata', compact('locations', 'wisatas'));
     }
 }

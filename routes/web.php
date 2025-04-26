@@ -9,3 +9,4 @@ Route::get('/wisata', [FrontController::class, 'wisata'])->name('wisata');
 Route::get('/umkm', [FrontController::class, 'umkm']);
 Route::get('/kuliner', [FrontController::class, 'kuliner']);
 Route::get('/komunitas', [FrontController::class, 'komunitas']);
+Route::post('/cari-map', [FrontController::class, 'cariMap'])->name('cari.map');
