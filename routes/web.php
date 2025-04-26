@@ -4,3 +4,7 @@ use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontController::class, 'index']);
+Route::get('/wisata', [FrontController::class, 'wisata']);
+Route::get('/umkm', [FrontController::class, 'umkm']);
+Route::get('/kuliner', [FrontController::class, 'kuliner']);
+Route::get('/komunitas', [FrontController::class, 'komunitas']);
