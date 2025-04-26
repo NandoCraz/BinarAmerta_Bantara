@@ -15,6 +15,9 @@ class FrontController extends Controller
     public function umkm() {
         return view('front.components.umkm');
     }
+    public function kuliner() {
+        return view('front.components.kuliner');
+    }
     public function komunitas() {
         return view('front.components.komunitas');
     }
