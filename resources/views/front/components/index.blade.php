@@ -1,3 +1,4 @@
+
 {{-- @dd($kategoris) --}}
 <!DOCTYPE html>
 <html lang="en">
@@ -73,62 +74,218 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </nav>
-
+@extends('front.layouts.main')
+@section('content')
     <!-- Main Content -->
-    <div class="container mx-auto px-30 py-6">
-        <!-- Balance Section -->
-        <div class="flex justify-between mb-6">
-            <div class="bg-red-200/10 rounded-lg shadow-sm px-4 py-2 me-5 w-full max-w-3xl">
-                <div class="flex flex-col space-y-1">
-                    <div class="flex justify-between items-center">
-                        <div class="text-m text-gray-500">Saldo E-Money</div>
-                        <div class="text-sm text-orange-500 font-semibold">Top up</div>
-                    </div>
-                    <div class="flex justify-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6 me-2 text-orange-500">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" />
+    <!-- Balance Section -->
+    <div class="flex justify-between mb-6">
+        <div class="bg-red-200/10 rounded-lg shadow-sm px-4 py-2 me-5 w-full max-w-3xl">
+            <div class="flex flex-col space-y-1">
+                <div class="flex justify-between items-center">
+                    <div class="text-m text-gray-500">Saldo E-Money</div>
+                    <div class="text-sm text-orange-500 font-semibold">Top up</div>
+                </div>
+                <div class="flex justify-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 me-2 text-orange-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" />
                         </svg>
                         <strong class="text-xl text-gray-900">Rp. 250.000</strong>
-                    </div>
                 </div>
             </div>
-            <div class="bg-green-200/10 rounded-lg shadow-sm px-4 py-2 w-full max-w-3xl">
-                <div class="flex flex-col space-y-1">
-                    <div class="flex justify-between items-center">
-                        <div class="text-m text-gray-500">Voucher Cashback</div>
-                        <div class="text-sm text-green-500 font-semibold">Lihat semua</div>
-                    </div>
-                    <div class="flex justify-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6 me-2 text-green-500">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+        </div>
+        <div class="bg-green-200/10 rounded-lg shadow-sm px-4 py-2 w-full max-w-3xl">
+            <div class="flex flex-col space-y-1">
+                <div class="flex justify-between items-center">
+                    <div class="text-m text-gray-500">Voucher Cashback</div>
+                    <div class="text-sm text-green-500 font-semibold">Lihat semua</div>
+                </div>
+                <div class="flex justify-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 me-2 text-green-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
                         </svg>
-                        <strong class="text-xl text-gray-900">3 Voucher</strong>
-                    </div>
+                    <strong class="text-xl text-gray-900">3 Voucher</strong>
                 </div>
-            </div>
 
-
-        </div>
-
-        <!-- Hero Section -->
-        <div class="relative bg-cover bg-center h-96 rounded-lg shadow-sm mb-6"
-            style="background-image: url('https://images.unsplash.com/photo-1507521628349-6e9b9b8f8b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')">
-            <div class="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
-            <div class="relative flex flex-col justify-center h-full p-6 text-white">
-                <h1 class="text-4xl font-bold mb-4">Jelajahi Keindahan Nusantara</h1>
-                <p class="text-lg mb-6">Bantara menghubungkan Anda dengan potensi wisata lokal Indonesia melalui
-                    berbagai fitur interaktif yang memudahkan pengguna untuk mengeksplorasi dan berpartisipasi dalam
-                    kegiatan ekonomi, sosial, dan budaya.</p>
             </div>
         </div>
 
+
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative bg-cover bg-center h-96 rounded-lg shadow-sm mb-6" style="background-image: url('https://images.unsplash.com/photo-1507521628349-6e9b9b8f8b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')">
+        <div class="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+        <div class="relative flex flex-col justify-center h-full p-6 text-white">
+            <h1 class="text-4xl font-bold mb-4">Jelajahi Keindahan Nusantara</h1>
+            <p class="text-lg mb-6">Bantara menghubungkan Anda dengan potensi wisata lokal Indonesia melalui berbagai fitur interaktif yang memudahkan pengguna untuk mengeksplorasi dan berpartisipasi dalam kegiatan ekonomi, sosial, dan budaya.</p>
+        </div>
+    </div>
+
+
+    <form class="mb-5">
+        <div class="container bg-white p-4 rounded-lg shadow-sm flex items-center justify-center space-x-3 max-w-5xl mx-auto">
+            <div class="flex-1">
+                <input type="text" id="search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5" placeholder="Cari destinasi, produk, atau kuliner..." required />
+            </div>
+            <div>
+                <select id="province" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-40 p-2.5">
+                    <option selected>Jawa Tengah</option>
+                </select>
+            </div>
+            <div>
+                <select id="city" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-40 p-2.5">
+                    <option selected>Wonosobo</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-start">Cari</button>
+            </div>
+        </div>
+    </form>
+    <div class="bg-gray-100 py-10">
+        <div class="w-full mx-auto max-w-screen-xl px-4">
+          <!-- Header Section with Background Image -->
+          <div class="relative rounded-lg overflow-hidden mb-8">
+            <img
+              src="https://via.placeholder.com/1200x400"
+              alt="Wonosobo Background"
+              class="w-full h-64 object-cover"
+            />
+            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+              <h1 class="text-4xl font-bold text-white">Wonosobo, Jawa Tengah</h1>
+            </div>
+          </div>
+
+          <!-- Main Content Section -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Side: Description, Sentiment Analysis, and Important Facts -->
+            <div class="lg:col-span-2 space-y-8">
+              <!-- Description -->
+              <div>
+                <p class="text-gray-700 text-justify">
+                  Wonosobo adalah kabupaten di Jawa Tengah yang dikenal sebagai destinasi wisata alam yang menawan, dengan suhu udara yang sejuk dan pemandangan yang memukau. Terletak di ketinggian 260 hingga 2.250 meter di atas permukaan laut, Wonosobo menawarkan udara segar dan panorama pegunungan yang indah, termasuk Dataran Tinggi Dieng yang terkenal dengan candi-candi kuno, kawah vulkanik, dan telaga warna yang memukau.
+                </p>
+              </div>
+
+              <!-- Sentiment Analysis -->
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Analisis Sentimen Masyarakat</h3>
+                <div class="space-y-4">
+                  <!-- Positive Sentiment -->
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span class="text-sm text-gray-600">Positif</span>
+                      <span class="text-sm text-gray-600">75%</span>
+                    </div>
+
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div class="bg-green-500 h-2.5 rounded-full" style="width: 75%"></div>
+
+                    </div>
+                  </div>
+                  <!-- Neutral Sentiment -->
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span class="text-sm text-gray-600">Netral</span>
+                      <span class="text-sm text-gray-600">20%</span>
+                    </div>
+
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div class="bg-gray-500 h-2.5 rounded-full" style="width: 20%"></div>
+
+                    </div>
+                  </div>
+                  <!-- Negative Sentiment -->
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span class="text-sm text-gray-600">Negatif</span>
+                      <span class="text-sm text-gray-600">5%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div class="bg-red-500 h-2.5 rounded-full" style="width: 5%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Important Facts -->
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Fakta Penting</h3>
+                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Ibu Kota: Wonosobo</li>
+                  <li>Luas Wilayah: 984,52 km²</li>
+                  <li>Jumlah Penduduk: Sekitar 800.000 jiwa (2023)</li>
+                  <li>Kepadatan Penduduk: 812 jiwa/km²</li>
+                  <li>Ketinggian: 260 - 2.250 mdpl</li>
+                  <li>Suhu Rata-Rata: 18°C - 25°C</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Side: Fun Facts, Best Time to Visit, and Festivals -->
+            <div class="space-y-8">
+              <!-- Fun Facts -->
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Fun Facts</h3>
+                <ul class="space-y-4">
+                  <li>
+                    <span class="font-medium text-gray-700">Demografi:</span>
+                    Mayoritas penduduk adalah suku Jawa dengan tradisi budaya yang kental.
+                  </li>
+                  <li>
+                    <span class="font-medium text-gray-700">Jumlah Penduduk:</span>
+                    Sekitar 800.000 jiwa.
+                  </li>
+                  <li>
+                    <span class="font-medium text-gray-700">Luas Wilayah:</span>
+                    984,52 km².
+                  </li>
+                  <li>
+                    <span class="font-medium text-gray-700">Iklim:</span>
+                    Cuaca hari ini 18°C, cerah berawan.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Best Time to Visit -->
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Waktu Terbaik Berlibur</h3>
+                <p class="text-gray-700">
+                  Bulan Juni hingga Agustus adalah waktu terbaik untuk berkunjung ke Wonosobo karena cuaca cenderung cerah dan kering, ideal untuk menikmati wisata alam seperti Dataran Tinggi Dieng.
+                </p>
+              </div>
+
+              <!-- Festivals and Events -->
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Festival dan Acara Lain</h3>
+                <p class="text-gray-700">
+                  Dieng Culture Festival (DCF) yang biasanya diadakan pada bulan Agustus, menampilkan tradisi pemotongan rambut gimbal, jazz atas awan, dan pawai budaya.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Section: UMKM Products and Tourist Destinations -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <!-- UMKM Products -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-lg font-semibold text-gray-800 mb-4">Produk UMKM Wonosobo Menarik</h3>
+              <p class="text-gray-700">
+                Carica, manisan khas Wonosobo yang terbuat dari buah pepaya gunung, menjadi oleh-oleh favorit. Selain itu, terdapat kerajinan tangan seperti anyaman bambu dan kopi lokal yang berkualitas.
+              </p>
+
+            </div>
+
+            <!-- Tourist Destinations -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-lg font-semibold text-gray-800 mb-4">Destinasi Wisata Wonosobo</h3>
+              <p class="text-gray-700">
+                Dataran Tinggi Dieng, Telaga Warna, Kawah Sikidang, dan Air Terjun Sikarim adalah beberapa destinasi unggulan yang menawarkan keindahan alam dan pengalaman budaya.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
         <form class="mb-5">
             <div
@@ -159,7 +316,57 @@
                 <div>
                     <button type="submit"
                         class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-start">Cari</button>
+    <!-- Features Section -->
+    <div class="mb-6">
+        <h2 class="text-2xl font-semibold mb-4 text-center relative">
+            Fitur Utama
+            {{-- <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-1 w-16 bg-orange-500 rounded"></span> --}}
+        </h2>
+        <div class="grid grid-cols-6 gap-4">
+            <div class="bg-gradient-to-br from-purple-800 via-purple-600 to-purple-400 text-white p-4 rounded-lg shadow-sm">
+                <div class="flex justify-start mb-3">
+                    <div class="h-10 w-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+                        </svg>
+                    </div>
                 </div>
+                <h3 class="text-lg font-semibold text-start mb-2">Jelajahi Nusantara</h3>
+                <p class="text-sm text-start">Temukan dan pesan tiket perjalanan dengan rute wisata terdekat menggunakan AI yang terintegrasi dengan Google Maps.</p>
+            </div>
+            <div class="bg-teal-600 text-white p-4 rounded-lg shadow-sm">
+                <div class="flex justify-start mb-3">
+                    <div class="h-10 w-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-semibold text-start mb-2">Etalase Daerah</h3>
+                <p class="text-sm text-start">Produk lokal khas daerah seperti kuliner, suvenir, madu, dan kopi dari berbagai daerah di Indonesia.</p>
+            </div>
+            <div class="bg-orange-600 text-white p-4 rounded-lg shadow-sm">
+                <div class="flex justify-start mb-3">
+                    <div class="h-10 w-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-semibold text-start mb-2">Rasa Nusantara</h3>
+                <p class="text-sm text-start">Temukan kuliner khas daerah warung kecil hingga restoran besar, lengkap dengan informasi harga dan ulasan.</p>
+            </div>
+            <div class="bg-purple-600 text-white p-4 rounded-lg shadow-sm">
+                <div class="flex justify-start mb-3">
+                    <div class="h-10 w-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+                        </svg>
+                    </div>
+
+                </div>
+                <h3 class="text-lg font-semibold text-start mb-2">Sahabat Bantara</h3>
+                <p class="text-sm text-start">Menjadi sukarelawan dengan bergabung di komunitas sesuai minat, bantuan AI untuk komunikasi diskusi otomatis.</p>
             </div>
         </form>
 
@@ -262,13 +469,6 @@
                         dengan kurs terbaru otomatis.</p>
                 </div>
             </div>
-        </div>
-        <div class="container mb-20">
-            <hr>
-            <p class="text-center">--map--</p>
-            <hr>
-        </div>
-        <div class="container">
 
         </div>
         <div class="container mx-auto">
@@ -311,6 +511,18 @@
             </div>
         </div>
 
+            <!-- Navigation Arrows -->
+            <button type="button" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100">
+            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            </button>
+            <button type="button" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-red-500 rounded-full p-2 shadow-md hover:bg-red-600">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            </button>
+    </div>
         <div class="container mx-auto px-4 py-6">
             <!-- Section Title -->
             <h2 class="text-2xl font-semibold mb-4 text-gray-900">Destinasi Populer</h2>
@@ -389,9 +601,13 @@
                     </svg>
                 </button>
             </div>
+
             <div class="container mx-auto px-4 py-6">
-                <!-- Section Title -->
-                <h2 class="text-2xl font-semibold mb-4 text-gray-900">Produk UMKM</h2>
+            <!-- Section Title -->
+            <div class="flex items-center mb-4">
+                <h2 class="text-2xl font-semibold text-gray-900">KULINER LOKAL</h2>
+                <div class="ml-2 h-1 w-12 bg-orange-500"></div>
+            </div>
 
                 <!-- Category Buttons -->
                 <div class="flex flex-wrap gap-2 mb-6">
@@ -635,3 +851,4 @@
 </body>
 
 </html>
+            

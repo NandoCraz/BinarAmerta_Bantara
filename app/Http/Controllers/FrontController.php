@@ -21,4 +21,13 @@ class FrontController extends Controller
         $jenis_masakan = Kuliner::select('jenis_masakan')->distinct()->pluck('jenis_masakan');
         return view('front.components.index', compact('wisatas', 'kuliners', 'provinsis', 'kotas', 'kategoris', 'produks', 'jenis_masakan'));
     }
+    public function wisata() {
+        return view('front.components.wisata');
+    }
+    public function umkm() {
+        return view('front.components.umkm');
+    }
+    public function komunitas() {
+        return view('front.components.komunitas');
+    }
 }
