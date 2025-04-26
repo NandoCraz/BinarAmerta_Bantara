@@ -4,8 +4,8 @@
     <!-- Hero Section with Tabs -->
     <div class="mb-6">
       <div class="relative">
-        <img class="w-full h-64 object-cover rounded-lg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="UKM Unggulan" />
-        <div class="absolute inset-0 bg-black bg-opacity-50 rounded-lg flex flex-col justify-center p-6">
+        <img class="w-full h-64 object-cover rounded-lg" src="https://static.promediateknologi.id/crop/0x85:1177x565/0x0/webp/photo/p2/209/2024/12/22/foto2-3151372763.jpeg" alt="UKM Unggulan" />
+        <div class="absolute inset-0 bg-opacity-50 rounded-lg flex flex-col justify-center p-6">
           <h1 class="text-3xl font-bold text-white">UKM Unggulan</h1>
         </div>
       </div>
@@ -99,16 +99,18 @@
     <!-- Produk Terlaris Section -->
     <div class="mt-6">
       <!-- Section Title -->
-      <div class="flex items-center mb-4">
-        <h2 class="text-2xl font-semibold text-gray-900">Produk Terlaris</h2>
-        <div class="ml-2 h-1 w-12 bg-orange-500"></div>
+      <div class="flex items-center mb-8">
+        <h2 class="text-2xl font-semibold text-gray-900 relative inline-block">
+          Produk Terlaris
+          <div class="absolute left-0 bottom-[-8px] h-1 w-16 bg-orange-500 rounded"></div>
+        </h2>
       </div>
 
       <!-- Cards Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         <!-- Card 1 -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kain Tenun Bali Toraja" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://down-id.img.susercontent.com/file/id-11134207-7r98t-llrz3gbpn5zz53" alt="Kain Tenun Bali Toraja" />
           <div class="p-4">
             <h5 class="text-sm font-semibold text-gray-900">Kain Tenun Bali Toraja</h5>
             <p class="text-sm text-gray-600 mt-2">Rp 150.000</p>
@@ -120,7 +122,7 @@
 
         <!-- Card 2 -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kopi Toraja 250gr" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/107/MTA-109919644/setia_kopi_setia_toraja_robusta_kalosi_excelent_250gr_full01_imz7ittz.jpg" alt="Kopi Toraja 250gr" />
           <div class="p-4">
             <h5 class="text-sm font-semibold text-gray-900">Kopi Toraja 250gr</h5>
             <p class="text-sm text-gray-600 mt-2">Rp 85.000</p>
@@ -132,7 +134,7 @@
 
         <!-- Card 3 -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kerajinan Kayu Bali" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://wonderfulimage.s3-id-jkt-1.kilatstorage.id/1598946606-dscf7857-medium.jpg" alt="Kerajinan Kayu Bali" />
           <div class="p-4">
             <h5 class="text-sm font-semibold text-gray-900">Kerajinan Kayu Bali</h5>
             <p class="text-sm text-gray-600 mt-2">Rp 200.000</p>
@@ -144,7 +146,7 @@
 
         <!-- Card 4 -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tas Rotan Bali Premium" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://asset-2.tstatic.net/travel/foto/bank/images/Ata-Aksana-Raya-tempat-belanja-tas-rotan-di-Karangasem-Bali-yang-cocok-untuk-oleh-oleh.jpg    " alt="Tas Rotan Bali Premium" />
           <div class="p-4">
             <h5 class="text-sm font-semibold text-gray-900">Tas Rotan Bali Premium</h5>
             <p class="text-sm text-gray-600 mt-2">Rp 150.000</p>

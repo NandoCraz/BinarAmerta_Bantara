@@ -31,11 +31,6 @@
             <option>Yogyakarta</option>
             <option>Bali</option>
           </select>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </div>
         </div>
 
         <!-- Harga Dropdown -->
@@ -46,11 +41,6 @@
             <option>Rp 50.000 - Rp 100.000</option>
             <option>> Rp 100.000</option>
           </select>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </div>
         </div>
 
         <!-- Filter Button -->
@@ -99,7 +89,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <!-- Card 1: Dapur Nusantara -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dapur Nusantara" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://nusantarajayanews.id/wp-content/uploads/2023/05/IMG-20230530-WA0039_copy_800x450.jpg" alt="Dapur Nusantara" />
           <div class="p-4">
             <div class="flex items-center justify-between">
               <h5 class="text-lg font-semibold text-gray-900">Dapur Nusantara</h5>
@@ -121,7 +111,7 @@
 
         <!-- Card 2: Gudeg Yogya -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gudeg Yogya" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://cdn-1.timesmedia.co.id/images/2022/12/21/gudeg-2.jpg" alt="Gudeg Yogya" />
           <div class="p-4">
             <div class="flex items-center justify-between">
               <h5 class="text-lg font-semibold text-gray-900">Gudeg Yogya</h5>
@@ -143,7 +133,7 @@
 
         <!-- Card 3: Sate Madura Asli -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sate Madura Asli" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://livetoday.id/wp-content/uploads/2024/06/resep-sate-ayam-madura.jpg" alt="Sate Madura Asli" />
           <div class="p-4">
             <div class="flex items-center justify-between">
               <h5 class="text-lg font-semibold text-gray-900">Sate Madura Asli</h5>
@@ -180,7 +170,7 @@
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
         <!-- Card 1: Rendang -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-32 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Rendang" />
+          <img class="rounded-t-lg w-full h-32 object-cover" src="https://www.sasa.co.id/medias/page_medias/resep_rendang_padang.jpg" alt="Rendang" />
           <div class="p-4">
             <h5 class="text-sm font-semibold text-gray-900">Rendang</h5>
             <p class="text-sm text-gray-600 mt-1">Rp 35.000</p>
@@ -189,7 +179,7 @@
 
         <!-- Card 2: Nasi Goreng -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-32 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nasi Goreng" />
+          <img class="rounded-t-lg w-full h-32 object-cover" src="https://www.dapurkobe.co.id/wp-content/uploads/nasi-goreng-chili-oil-boncabe.jpg" alt="Nasi Goreng" />
           <div class="p-4">
             <h5 class="text-sm font-semibold text-gray-900">Nasi Goreng</h5>
             <p class="text-sm text-gray-600 mt-1">Rp 25.000</p>
@@ -198,7 +188,7 @@
 
         <!-- Card 3: Ayam Geprek -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-32 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ayam Geprek" />
+          <img class="rounded-t-lg w-full h-32 object-cover" src="https://www.dapurkobe.co.id/wp-content/uploads/ayam-geprek-sambal-korek.jpg" alt="Ayam Geprek" />
           <div class="p-4">
             <h5 class="text-sm font-semibold text-gray-900">Ayam Geprek</h5>
             <p class="text-sm text-gray-600 mt-1">Rp 20.000</p>
@@ -207,7 +197,7 @@
 
         <!-- Card 4: Soto Ayam -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-32 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Soto Ayam" />
+          <img class="rounded-t-lg w-full h-32 object-cover" src="https://asset.kompas.com/crops/yc5vBBn_kny5uxIg5QNuj7Qzx6c=/0x0:1000x667/1200x800/data/photo/2024/03/21/65fbab7732136.jpeg" alt="Soto Ayam" />
           <div class="p-4">
             <h5 class="text-sm font-semibold text-gray-900">Soto Ayam</h5>
             <p class="text-sm text-gray-600 mt-1">Rp 15.000</p>
@@ -216,7 +206,7 @@
 
         <!-- Card 5: Gado-Gado -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-32 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gado-Gado" />
+          <img class="rounded-t-lg w-full h-32 object-cover" src="https://asset.kompas.com/crops/dvIXFEQseHh2i_8O6kbrmgIGnJk=/67x41:947x627/1200x800/data/photo/2023/04/28/644b5e7f5131f.jpg" alt="Gado-Gado" />
           <div class="p-4">
             <h5 class="text-sm font-semibold text-gray-900">Gado-Gado</h5>
             <p class="text-sm text-gray-600 mt-1">Rp 20.000</p>
@@ -238,9 +228,9 @@
 
       <!-- Cards Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <!-- Card 1: Workshop Membuat Rend」で
+        <!-- Card 1: Workshop Membuat Rend-->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Workshop Membuat Rendang" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://cdn1-production-images-kly.akamaized.net/craZFf_-mZatV3GxJ11FWuOiDz4=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5071691/original/004106100_1735540569-1735029155040_resep-rendang-daging.jpg" alt="Workshop Membuat Rendang" />
           <div class="p-4">
             <h5 class="text-lg font-semibold text-gray-900">Workshop Membuat Rendang</h5>
             <p class="text-sm text-gray-600 mt-2">📍 Padang, Sumatra Barat</p>
@@ -254,7 +244,7 @@
 
         <!-- Card 2: Tur Kuliner Yogyakarta -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tur Kuliner Yogyakarta" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://alodiatour.com/wp-content/uploads/2024/04/Copy-of-Salinan-dari-TUMBNAIL-41.jpg" alt="Tur Kuliner Yogyakarta" />
           <div class="p-4">
             <h5 class="text-lg font-semibold text-gray-900">Tur Kuliner Yogyakarta</h5>
             <p class="text-sm text-gray-600 mt-2">📍 Yogyakarta</p>
@@ -268,7 +258,7 @@
 
         <!-- Card 3: Tur Pasar Tradisional Ubud -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tur Pasar Tradisional Ubud" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://www.gotravelaindonesia.com/wp-content/uploads/Pasar-Tradisional-Ubud.jpg.webp" alt="Tur Pasar Tradisional Ubud" />
           <div class="p-4">
             <h5 class="text-lg font-semibold text-gray-900">Tur Pasar Tradisional Ubud</h5>
             <p class="text-sm text-gray-600 mt-2">📍 Ubud, Bali</p>
