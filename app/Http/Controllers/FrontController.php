@@ -22,13 +22,16 @@ class FrontController extends Controller
         return view('front.components.index', compact('wisatas', 'kuliners', 'provinsis', 'kotas', 'kategoris', 'produks', 'jenis_masakan'));
     }
     public function wisata() {
-        return view('front.components.wisata');
+        $wisatas = Wisata::with('kota.provinsi')->get();
+        return view('front.components.wisata', compact('wisatas'));
     }
     public function umkm() {
-        return view('front.components.umkm');
+        $produks = ProdukLokal::with('wisata.kota.provinsi')->get();
+        return view('front.components.umkm', compact('produks'));
     }
     public function kuliner() {
-        return view('front.components.kuliner');
+        $kuliners = Kuliner::with('kota.provinsi')->get();
+        return view('front.components.kuliner', compact('kuliners'));
     }
     public function komunitas() {
         return view('front.components.komunitas');
