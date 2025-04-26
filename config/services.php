@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'sendbird' => [
+    'api_token' => env('SENDBIRD_API_TOKEN'),
+    'app_id' => env('SENDBIRD_APP_ID'),
+    ],
+
 ];
