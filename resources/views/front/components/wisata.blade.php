@@ -65,54 +65,6 @@
                 </button>
             </div>
         </div>
-        <div class="flex items-center space-x-4 mb-4">
-            <!-- Kategori Dropdown -->
-            <div class="relative">
-                <select id="kategori"
-                    class="bg-gray-100 border-none text-gray-600 text-sm rounded-lg block w-48 p-2.5 appearance-none">
-                    <option selected>Semua Kategori</option>
-                    <option>Pantai & Pulau</option>
-                    <option>Gunung & Alam</option>
-                    <option>Sejarah & Budaya</option>
-                </select>
-                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Tanggal Kunjungan Input -->
-            <div class="relative">
-                <input type="text" placeholder="mm/dd/yyyy"
-                    class="bg-gray-100 border-none text-gray-600 text-sm rounded-lg block w-48 p-2.5" />
-            </div>
-
-            <!-- Jumlah Pengunjung Dropdown -->
-            <div class="relative">
-                <select id="pengunjung"
-                    class="bg-gray-100 border-none text-gray-600 text-sm rounded-lg block w-48 p-2.5 appearance-none">
-                    <option selected>1 Orang</option>
-                    <option>2 Orang</span>
-                    <option>3 Orang</span>
-                    <option>4+ Orang</span>
-                </select>
-                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Cari Lokasi Button -->
-            <button type="button"
-                class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5">
-                Cari Lokasi & Pesan Tiket
-            </button>
-        </div>
-
         <!-- Promo Spesial Section -->
         <div class="mb-6">
             <!-- Section Title -->
@@ -200,7 +152,7 @@
                             var places = @json($locations); // Mengambil data dari controller dan mengubahnya ke dalam format JSON
                             console.log(places);
                             console.log(locationInput);
-                            
+
                             // Looping melalui tempat dan menambahkan marker ke peta
                             places.forEach(function(place) {
                               // Menambahkan marker untuk setiap tempat tanpa memeriksa input pencarian
