@@ -26,17 +26,18 @@ class FrontController extends Controller
         $relawan = Volunter::where('nama_acara', 'not like', '%komunitas%')->get();
         return view('front.components.index', compact('wisatas', 'kuliners', 'provinsis', 'kotas', 'kategoris', 'produks', 'jenis_masakan', 'komunitas', 'relawan'));
     }
-    public function wisata()
-    {
-        return view('front.components.wisata');
+
+    public function wisata() {
+        $wisatas = Wisata::with('kota.provinsi')->get();
+        return view('front.components.wisata', compact('wisatas'));
     }
-    public function umkm()
-    {
-        return view('front.components.umkm');
+    public function umkm() {
+        $produks = ProdukLokal::with('wisata.kota.provinsi')->get();
+        return view('front.components.umkm', compact('produks'));
     }
-    public function kuliner()
-    {
-        return view('front.components.kuliner');
+    public function kuliner() {
+        $kuliners = Kuliner::with('kota.provinsi')->get();
+        return view('front.components.kuliner', compact('kuliners'));
     }
     public function komunitas()
     {

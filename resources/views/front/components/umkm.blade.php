@@ -68,7 +68,7 @@
       <!-- Product Grid -->
       <div class="w-3/4">
         <div class="mb-4 flex items-center justify-between">
-          <h3 class="text-lg font-semibold text-gray-900">Produk UKM & Lokal (248+ Produk)</h3>
+          <h3 class="text-lg font-semibold text-gray-900">Produk UKM & Lokal {{  count($produks) }}</h3>
           <select class="bg-gray-100 border-none text-gray-600 text-sm rounded-lg p-2 appearance-none">
             <option>Terbaru</option>
             <option>Terpopuler</option>
@@ -79,96 +79,19 @@
 
         <!-- Cards Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-          <!-- Card 1 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kain Tenun Bali Toraja" />
-            <div class="p-4">
-              <h5 class="text-sm font-semibold text-gray-900">Kain Tenun Bali Toraja</h5>
-              <p class="text-sm text-gray-600 mt-1">Kain tenun tradisional Bali dengan motif khas, cocok untuk pakaian adat atau dekorasi rumah.</p>
-              <p class="text-sm text-gray-600 mt-2">Rp 150.000</p>
-              <button class="mt-4 w-full text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5">
-                Beli Sekarang
-              </button>
+            @foreach ($produks as $produk)
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+              <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kain Tenun Bali Toraja" />
+              <div class="p-4">
+                <h5 class="text-sm font-semibold text-gray-900">{{$produk->nama_produk}}</h5>
+                <p class="text-sm text-gray-600 mt-1">{{$produk->nama_produk}}</p>
+                <p class="text-sm text-gray-600 mt-2">Rp. {{ number_format($produk->harga, 0, ',', '.') }}</p>
+                <button class="mt-4 w-full text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                  Beli Sekarang
+                </button>
+              </div>
             </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kopi Arabica Desa Toraja 250gr" />
-            <div class="p-4">
-              <h5 class="text-sm font-semibold text-gray-900">Kopi Arabica Desa Toraja 250gr</h5>
-              <p class="text-sm text-gray-600 mt-1">Kopi Arabica dari Toraja dengan cita rasa khas, dikemas dengan kemasan premium.</p>
-              <p class="text-sm text-gray-600 mt-2">Rp 85.000</p>
-              <button class="mt-4 w-full text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5">
-                Beli Sekarang
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kerajinan Kayu Bali Motif Burung" />
-            <div class="p-4">
-              <h5 class="text-sm font-semibold text-gray-900">Kerajinan Kayu Bali Motif Burung</h5>
-              <p class="text-sm text-gray-600 mt-1">Kerajinan tangan dari kayu Bali dengan motif burung, cocok untuk dekorasi rumah.</p>
-              <p class="text-sm text-gray-600 mt-2">Rp 200.000</p>
-              <button class="mt-4 w-full text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5">
-                Beli Sekarang
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kain Tenun Toraja Murah" />
-            <div class="p-4">
-              <h5 class="text-sm font-semibold text-gray-900">Kain Tenun Toraja Murah</h5>
-              <p class="text-sm text-gray-600 mt-1">Kain tenun tradisional Toraja dengan motif sederhana, cocok untuk pakaian adat.</p>
-              <p class="text-sm text-gray-600 mt-2">Rp 120.000</p>
-              <button class="mt-4 w-full text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5">
-                Beli Sekarang
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Serum Wajah Herbal & Alami" />
-            <div class="p-4">
-              <h5 class="text-sm font-semibold text-gray-900">Serum Wajah Herbal & Alami</h5>
-              <p class="text-sm text-gray-600 mt-1">Serum wajah alami dengan bahan herbal, cocok untuk semua jenis kulit.</p>
-              <p class="text-sm text-gray-600 mt-2">Rp 90.000</p>
-              <button class="mt-4 w-full text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5">
-                Beli Sekarang
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tas Rotan Bali Premium" />
-            <div class="p-4">
-              <h5 class="text-sm font-semibold text-gray-900">Tas Rotan Bali Premium</h5>
-              <p class="text-sm text-gray-600 mt-1">Tas rotan Bali dengan desain premium, cocok untuk acara formal atau kasual.</p>
-              <p class="text-sm text-gray-600 mt-2">Rp 150.000</p>
-              <button class="mt-4 w-full text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5">
-                Beli Sekarang
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 7 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Angklung Bali 7 Nada" />
-            <div class="p-4">
-              <h5 class="text-sm font-semibold text-gray-900">Angklung Bali 7 Nada</h5>
-              <p class="text-sm text-gray-600 mt-1">Angklung tradisional Bali dengan 7 nada, cocok untuk belajar musik tradisional.</p>
-              <p class="text-sm text-gray-600 mt-2">Rp 100.000</p>
-              <button class="mt-4 w-full text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5">
-                Beli Sekarang
-              </button>
-            </div>
-          </div>
+            @endforeach
         </div>
       </div>
     </div>

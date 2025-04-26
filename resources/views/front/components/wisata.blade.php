@@ -8,9 +8,6 @@
       <div class="relative flex-1">
         <input type="text" placeholder="Cari destinasi, aktivitas..." class="w-full p-2.5 text-sm text-gray-900 bg-gray-100 border-none rounded-lg focus:ring-orange-500 focus:border-orange-500" />
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-          </svg>
         </div>
       </div>
 
@@ -23,9 +20,6 @@
           <option>Yogyakarta</option>
         </select>
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-          <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
         </div>
       </div>
 
@@ -38,9 +32,6 @@
           <option>> Rp 1.000.000</option>
         </select>
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-          <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
         </div>
       </div>
 
@@ -53,9 +44,6 @@
           <option>< 4.0</option>
         </select>
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-          <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
         </div>
       </div>
 
@@ -76,57 +64,26 @@
 
     <!-- Cards Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-      <!-- Card 1: Paket Uluwatu Bali -->
-      <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-        <div class="relative">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Paket Uluwatu Bali" />
-          <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-medium px-2 py-1 rounded">30% OFF</div>
+        @foreach ($wisatas as $wisata)
+        <!-- Card 1: Paket Uluwatu Bali -->
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+          <div class="relative">
+            <img class="rounded-t-lg w-full h-48 object-cover" src="" alt="{{$wisata->nama_tempat}}" />
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-medium px-2 py-1 rounded">20% OFF</div>
+          </div>
+          <div class="p-4">
+            <h5 class="text-lg font-semibold text-gray-900">{{ $wisata->nama_tempat }}</h5>
+            <p class="text-sm text-gray-600">
+                @if ($wisata->harga == 0)
+                    Gratis
+                @else
+                    Rp. {{ number_format($wisata->harga, 0, ',', '.') }}
+                @endif
+            </p>
+            <a href="#" class="mt-2 inline-block text-orange-500 font-medium text-sm hover:underline">Lihat Detail</a>
+          </div>
         </div>
-        <div class="p-4">
-          <h5 class="text-lg font-semibold text-gray-900">Paket Uluwatu Bali 3D2N</h5>
-          <p class="text-sm text-gray-600">Rp 2.400.000</p>
-          <a href="#" class="mt-2 inline-block text-orange-500 font-medium text-sm hover:underline">Lihat Detail</a>
-        </div>
-      </div>
-
-      <!-- Card 2: Paket Wisata Yogyakarta -->
-      <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-        <div class="relative">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1591019476720-4b9a7d019f53?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Paket Wisata Yogyakarta" />
-          <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-medium px-2 py-1 rounded">25% OFF</div>
-        </div>
-        <div class="p-4">
-          <h5 class="text-lg font-semibold text-gray-900">Paket Wisata Yogyakarta</h5>
-          <p class="text-sm text-gray-600">Rp 1.300.000</p>
-          <a href="#" class="mt-2 inline-block text-orange-500 font-medium text-sm hover:underline">Lihat Detail</a>
-        </div>
-      </div>
-
-      <!-- Card 3: Eksplorasi Raja Ampat -->
-      <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-        <div class="relative">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Eksplorasi Raja Ampat" />
-          <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-medium px-2 py-1 rounded">42% OFF</div>
-        </div>
-        <div class="p-4">
-          <h5 class="text-lg font-semibold text-gray-900">Eksplorasi Raja Ampat 5D4N</h5>
-          <p class="text-sm text-gray-600">Rp 8.600.000</p>
-          <a href="#" class="mt-2 inline-block text-orange-500 font-medium text-sm hover:underline">Lihat Detail</a>
-        </div>
-      </div>
-
-      <!-- Card 4: Sunrise Bromo -->
-      <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-        <div class="relative">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1591019476720-4b9a7d019f53?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sunrise Bromo" />
-          <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-medium px-2 py-1 rounded">20% OFF</div>
-        </div>
-        <div class="p-4">
-          <h5 class="text-lg font-semibold text-gray-900">Sunrise Bromo 3D2N</h5>
-          <p class="text-sm text-gray-600">Rp 1.700.000</p>
-          <a href="#" class="mt-2 inline-block text-orange-500 font-medium text-sm hover:underline">Lihat Detail</a>
-        </div>
-      </div>
+        @endforeach
     </div>
   </div>
 

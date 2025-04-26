@@ -20,9 +20,6 @@
         <div class="relative flex-1">
           <input type="text" placeholder="Cari makanan, restoran..." class="w-full p-2.5 text-sm text-gray-900 bg-gray-100 border-none rounded-lg focus:ring-orange-500 focus:border-orange-500" />
           <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
           </div>
         </div>
 
@@ -73,45 +70,17 @@
 
       <!-- Cards Grid -->
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-        <!-- Card 1: Makanan Pagi -->
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-32 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Makanan Pagi" />
-          <div class="p-4 text-center">
-            <h5 class="text-sm font-semibold text-gray-900">Makanan Pagi</h5>
-          </div>
-        </div>
-
-        <!-- Card 2: Makanan Siang -->
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-32 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Makanan Siang" />
-          <div class="p-4 text-center">
-            <h5 class="text-sm font-semibold text-gray-900">Makanan Siang</h5>
-          </div>
-        </div>
-
-        <!-- Card 3: Makanan Sunda -->
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-32 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Makanan Sunda" />
-          <div class="p-4 text-center">
-            <h5 class="text-sm font-semibold text-gray-900">Makanan Sunda</h5>
-          </div>
-        </div>
-
-        <!-- Card 4: Makanan Bali -->
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-32 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Makanan Bali" />
-          <div class="p-4 text-center">
-            <h5 class="text-sm font-semibold text-gray-900">Makanan Bali</h5>
-          </div>
-        </div>
-
-        <!-- Card 5: Makanan Aceh -->
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-32 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Makanan Aceh" />
-          <div class="p-4 text-center">
-            <h5 class="text-sm font-semibold text-gray-900">Makanan Aceh</h5>
-          </div>
-        </div>
+        @foreach ($kuliners as $kuliner)
+            @if ($kuliner->kategori  == 'Masakan Tradisional')
+                <!-- Card 1: Makanan Pagi -->
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                <img class="rounded-t-lg w-full h-32 object-cover" src="https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.jpg?s=612x612&w=0&k=20&c=hnh2OZgQGhf0b46-J2z7aHbIWwq8HNlSDaNp2wn_iko=" alt="Makanan Pagi" />
+                <div class="p-4 text-center">
+                    <h5 class="text-sm font-semibold text-gray-900">{{ $kuliner->nama_tempat }}</h5>
+                </div>
+                </div>
+            @endif
+        @endforeach
       </div>
     </div>
 
