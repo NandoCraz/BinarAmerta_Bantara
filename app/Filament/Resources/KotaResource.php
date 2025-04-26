@@ -27,6 +27,7 @@ class KotaResource extends Resource
     protected static ?string $navigationGroup = 'Master Data';
     protected static ?string $navigationLabel = 'Data Kota';
     protected static ?string $label = 'Data Kota';
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {

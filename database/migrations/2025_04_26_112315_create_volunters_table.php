@@ -22,6 +22,8 @@ return new class extends Migration
             $table->text('deskripsi');
             $table->double('harga');
             $table->string('link_maps');
+            $table->integer('kuota');
+            $table->string('banner');
             $table->timestamps();
         });
     }
