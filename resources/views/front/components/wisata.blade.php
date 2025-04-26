@@ -53,50 +53,7 @@
       </button>
     </div>
   </div>
-
-  <!-- Promo Spesial Section -->
-  <div class="mb-6">
-    <!-- Section Title -->
-    <div class="flex items-center mb-4">
-      <h2 class="text-2xl font-semibold text-gray-900">Promo Spesial</h2>
-      <div class="ml-2 h-1 w-12 bg-orange-500"></div>
-    </div>
-
-    <!-- Cards Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-        @foreach ($wisatas as $wisata)
-        <!-- Card 1: Paket Uluwatu Bali -->
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <div class="relative">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="" alt="{{$wisata->nama_tempat}}" />
-            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-medium px-2 py-1 rounded">20% OFF</div>
-          </div>
-          <div class="p-4">
-            <h5 class="text-lg font-semibold text-gray-900">{{ $wisata->nama_tempat }}</h5>
-            <p class="text-sm text-gray-600">
-                @if ($wisata->harga == 0)
-                    Gratis
-                @else
-                    Rp. {{ number_format($wisata->harga, 0, ',', '.') }}
-                @endif
-            </p>
-            <a href="#" class="mt-2 inline-block text-orange-500 font-medium text-sm hover:underline">Lihat Detail</a>
-          </div>
-        </div>
-        @endforeach
-    </div>
-  </div>
-
-  <!-- Wisata Terdekat Section -->
-  <div class="mb-6">
-    <!-- Section Title -->
-    <div class="flex items-center mb-4">
-      <h2 class="text-2xl font-semibold text-gray-900">Wisata Terdekat</h2>
-      <div class="ml-2 h-1 w-12 bg-orange-500"></div>
-    </div>
-
-    <!-- Filters -->
-    <div class="flex items-center space-x-4 mb-4">
+<div class="flex items-center space-x-4 mb-4">
       <!-- Kategori Dropdown -->
       <div class="relative">
         <select id="kategori" class="bg-gray-100 border-none text-gray-600 text-sm rounded-lg block w-48 p-2.5 appearance-none">
@@ -137,6 +94,53 @@
         Cari Lokasi & Pesan Tiket
       </button>
     </div>
+
+  <!-- Promo Spesial Section -->
+  <div class="mb-6">
+    <!-- Section Title -->
+    <div class="flex items-center mb-8">
+        <h2 class="text-2xl font-semibold text-gray-900 relative inline-block">
+          Promo Spesial
+          <div class="absolute left-0 bottom-[-8px] h-1 w-16 bg-orange-500 rounded"></div>
+        </h2>
+      </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        @foreach ($wisatas as $wisata)
+        <!-- Card 1: Paket Uluwatu Bali -->
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+          <div class="relative">
+            <img class="rounded-t-lg w-full h-48 object-cover" src="" alt="{{$wisata->nama_tempat}}" />
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-medium px-2 py-1 rounded">20% OFF</div>
+          </div>
+          <div class="p-4">
+            <h5 class="text-lg font-semibold text-gray-900">{{ $wisata->nama_tempat }}</h5>
+            <p class="text-sm text-gray-600">
+                @if ($wisata->harga == 0)
+                    Gratis
+                @else
+                    Rp. {{ number_format($wisata->harga, 0, ',', '.') }}
+                @endif
+            </p>
+            <a href="#" class="mt-2 inline-block text-orange-500 font-medium text-sm hover:underline">Lihat Detail</a>
+          </div>
+        </div>
+        @endforeach
+    </div>
+  </div>
+
+  <!-- Wisata Terdekat Section -->
+  <div class="mb-6">
+    <!-- Section Title -->
+    <div class="flex items-center mb-8">
+        <h2 class="text-2xl font-semibold text-gray-900 relative inline-block">
+          Wisata Terdekat
+          <div class="absolute left-0 bottom-[-8px] h-1 w-16 bg-orange-500 rounded"></div>
+        </h2>
+      </div>
+
+    <!-- Filters -->
 
     <!-- Map and Cards -->
     <div class="flex space-x-4">
@@ -216,10 +220,12 @@
   <!-- Kategori Populer Section -->
   <div class="mb-6">
     <!-- Section Title -->
-    <div class="flex items-center mb-4">
-      <h2 class="text-2xl font-semibold text-gray-900">Kategori Populer</h2>
-      <div class="ml-2 h-1 w-12 bg-orange-500"></div>
-    </div>
+    <div class="flex items-center mb-8">
+        <h2 class="text-2xl font-semibold text-gray-900 relative inline-block">
+          Kategori Populer
+          <div class="absolute left-0 bottom-[-8px] h-1 w-16 bg-orange-500 rounded"></div>
+        </h2>
+      </div>
 
     <!-- Buttons Grid -->
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
@@ -249,10 +255,12 @@
     <div class="mb-6">
       <!-- Section Title -->
       <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center">
-          <h2 class="text-2xl font-semibold text-gray-900">Untuk Anda</h2>
-          <div class="ml-2 h-1 w-12 bg-orange-500"></div>
-        </div>
+        <div class="flex items-center mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 relative inline-block">
+              Untuk Anda
+              <div class="absolute left-0 bottom-[-8px] h-1 w-16 bg-orange-500 rounded"></div>
+            </h2>
+          </div>
         <a href="#" class="text-orange-500 font-medium text-sm hover:underline">Atur Preferensi</a>
       </div>
 
@@ -260,7 +268,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
         <!-- Card 1: Dieng Plateau -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dieng Plateau" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://i0.wp.com/www.anekajateng.com/wp-content/uploads/2024/09/Dieng-Plateau.jpg?fit=960%2C540&ssl=1" alt="Dieng Plateau" />
           <div class="p-4">
             <div class="flex items-center justify-between">
               <h5 class="text-lg font-semibold text-gray-900">Dieng Plateau</h5>
@@ -277,7 +285,7 @@
 
         <!-- Card 2: Nusa Penida -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1591019476720-4b9a7d019f53?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nusa Penida" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/f5/3e/e5/nusa-penida-island.jpg?w=1200&h=-1&s=1" alt="Nusa Penida" />
           <div class="p-4">
             <div class="flex items-center justify-between">
               <h5 class="text-lg font-semibold text-gray-900">Nusa Penida</h5>
@@ -294,7 +302,7 @@
 
         <!-- Card 3: Kepulauan Derawan -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kepulauan Derawan" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://kaltim.akurasi.id/wp-content/uploads/2023/05/Pulau-Derawan-Diakui-Sebagai-Kawasan-Terumbu-Karang-Terbaik-di-Dunia-DPMPTSP-Kaltim-Lihat-Potensi-Bisnis-Menjanjikan-Akurasi.id_.jpeg" alt="Kepulauan Derawan" />
           <div class="p-4">
             <div class="flex items-center justify-between">
               <h5 class="text-lg font-semibold text-gray-900">Kepulauan Derawan</h5>
@@ -314,7 +322,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         <!-- Card 4: Gunung Bromo -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1591019476720-4b9a7d019f53?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gunung Bromo" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Mount_Bromo_at_sunrise%2C_showing_its_volcanoes_and_Mount_Semeru_%28background%29.jpg" alt="Gunung Bromo" />
           <div class="p-4">
             <div class="flex items-center justify-between">
               <h5 class="text-lg font-semibold text-gray-900">Gunung Bromo</h5>
@@ -331,10 +339,10 @@
 
         <!-- Card 5: Candil Borobudur -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Candil Borobudur" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://asset.kompas.com/crops/0dtdqvbvWPEfJoj2XLwA702kofk=/0x112:1430x1066/1200x800/data/photo/2022/03/07/6225c0669e6d2.jpg" alt="Candil Borobudur" />
           <div class="p-4">
             <div class="flex items-center justify-between">
-              <h5 class="text-lg font-semibold text-gray-900">Candil Borobudur</h5>
+              <h5 class="text-lg font-semibold text-gray-900">Candi Borobudur</h5>
               <div class="flex items-center">
                 <svg class="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.975a1 1 0 00.95.69h4.173c.969 0 1.371 1.24.588 1.81l-3.375 2.453a1 1 0 00-.364 1.118l1.286 3.975c.3.921-.755 1.688-1.54 1.118l-3.375-2.453a1 1 0 00-1.175 0l-3.375 2.453c-.784.57-1.838-.197-1.54-1.118l1.286-3.975a1 1 0 00-.364-1.118L2.69 9.402c-.783-.57-.381-1.81.588-1.81h4.173a1 1 0 00.95-.69l1.286-3.975z"></path>
@@ -348,7 +356,7 @@
 
         <!-- Card 6: Ubud -->
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-          <img class="rounded-t-lg w-full h-48 object-cover" src="https://images.unsplash.com/photo-1591019476720-4b9a7d019f53?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ubud" />
+          <img class="rounded-t-lg w-full h-48 object-cover" src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQjdpja292d0eE6avkzBN04XlT004E6hnbHYEFZUhM8cs_nuNeV6of6hMHojj50LwcTtvKMyYn2HkWnO1ykW2CGRf4xYO-x0vB7kQ889A" alt="Ubud" />
           <div class="p-4">
             <div class="flex items-center justify-between">
               <h5 class="text-lg font-semibold text-gray-900">Ubud</h5>
@@ -385,9 +393,11 @@
     <!-- Pesan Tiket Cepat Section -->
     <div class="mb-6">
       <!-- Section Title -->
-      <div class="flex items-center mb-4">
-        <h2 class="text-2xl font-semibold text-gray-900">Pesan Tiket Cepat</h2>
-        <div class="ml-2 h-1 w-12 bg-orange-500"></div>
+      <div class="flex items-center mb-8">
+        <h2 class="text-2xl font-semibold text-gray-900 relative inline-block">
+          Pesan Tiket Cepat
+          <div class="absolute left-0 bottom-[-8px] h-1 w-16 bg-orange-500 rounded"></div>
+        </h2>
       </div>
 
       <!-- Form -->
@@ -446,11 +456,12 @@
     <!-- Informasi Tambahan Section -->
     <div class="mb-6">
       <!-- Section Title -->
-      <div class="flex items-center mb-4">
-        <h2 class="text-2xl font-semibold text-gray-900">Informasi Tambahan</h2>
-        <div class="ml-2 h-1 w-12 bg-orange-500"></div>
+      <div class="flex items-center mb-8">
+        <h2 class="text-2xl font-semibold text-gray-900 relative inline-block">
+          Informasi Tambahan
+          <div class="absolute left-0 bottom-[-8px] h-1 w-16 bg-orange-500 rounded"></div>
+        </h2>
       </div>
-
       <!-- Info Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <!-- Protokol COVID-19 -->
